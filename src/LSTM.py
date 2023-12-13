@@ -5,8 +5,8 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 mod = load_model("model/gru_model.h5")
 data = pd.read_csv("data/EURUSD.csv")
-x = data[["close", "high", "low"]]
-y = data["open"]
+x = data[["Close", "High", "Low"]]
+y = data["Open"]
 x = x.to_numpy()
 y = y.to_numpy()
 y = y.reshape(-1, 1)
