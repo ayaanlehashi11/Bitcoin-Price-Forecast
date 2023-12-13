@@ -29,11 +29,7 @@ print(model.summary())
 model.fit(xtrain , ytrain, epochs=100, batch_size=10,verbose=2,validation_split=0.3)
 model.save('lstm_model.h5')
 
-"""data2=pd.DataFrame(data={"Pred": predictions.flatten()})
-print(data2.head())
-print(data2["Pred"])
-print(data2.shape)
-data2.to_csv('IndicatorMin.csv',index=False, header=False,sep=';')"""
+
 
 
 
