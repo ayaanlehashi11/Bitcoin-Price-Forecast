@@ -4,7 +4,7 @@ from sklearn.metrics import r2_score
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 mod = load_model("model/gru_model.h5")
-data = pd.read_csv("data/EURUSD.csv")
+data = pd.read_csv("data/BTC-USD.csv")
 x = data[["Close", "High", "Low"]]
 y = data["Open"]
 x = x.to_numpy()
