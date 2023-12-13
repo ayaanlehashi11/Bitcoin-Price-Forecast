@@ -7,8 +7,9 @@ from sklearn.metrics import r2_score
 import pandas as pd
 import numpy as np
 import math
-InputNet = pd.read_csv("data/EURUSDTest.csv")
-InputNet1 = pd.read_csv("data/EURUSDIndicatorMin.csv")
+
+InputNet = pd.read_csv("data/BTC-USD.csv")
+
 # data_open = InputNet.filter(['open'])
 # dataset = data_open.values
 x = InputNet[['close', 'high', 'low']]
@@ -28,10 +29,3 @@ model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 print(model.summary())
 model.fit(xtrain , ytrain, epochs=40, batch_size=10,verbose=2,validation_split=0.3)
 model.save('gru_model.h5')
-
-"""
-NetTest=pd.read_csv('EURUSD.csv', delimiter=',',header=None)
-Date=pd.read_csv('EURUSDDate.csv', delimiter=';',header=None)
-Net1Max = model.predict(xtrain)
-Date['0'] = Net1Max
-Date.to_csv('Response.csv',index=False, header=False,sep=';')"""
