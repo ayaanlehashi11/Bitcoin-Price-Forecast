@@ -1,1 +1,1 @@
-# Trend Forecast using RNN
+# Bitcoin price & Trend Forecasting with RNN (LSTM and GRU)
